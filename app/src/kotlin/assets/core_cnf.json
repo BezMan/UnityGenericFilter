@@ -1,0 +1,439 @@
+{
+  "info": {
+    "config_ver": 1,
+    "service_name": "core"
+  },
+  "data": {
+    "compensation": {
+      "cf_time": 238,
+      "enabled": true,
+      "cf_mileage": 1.27,
+      "max_distance_m": 4828,
+      "min_distance_m": 0
+    },
+    "crash_detection": {
+      "enabled": true,
+      "report_tsd": true,
+      "silent_detection": true,
+      "sync_max_duration_sec": 1500,
+      "updates_retry_window_sec": 300,
+      "GPS_trail_max_duration_sec": 3600,
+      "detection_retry_window_sec": 300
+    },
+    "algo_params": {
+      "scoring": {
+        "weights": {
+          "accScoreGasWeight": "0.2",
+          "brkScoreGasWeight": "0",
+          "crnScoreGasWeight": "0",
+          "phoneCallScoreWeight": "0.2",
+          "exSpeedScoreGasWeight": "0.3",
+          "lowSpeedScoreGasWeight": "0.5",
+          "accScoreSafetyWeightCity": "0.4",
+          "brkScoreSafetyWeightCity": "0.5",
+          "crnScoreSafetyWeightCity": "0.1",
+          "relativeRiskFactorForCall": "2",
+          "accScoreSafetyWeightHighway": "0.2",
+          "brkScoreSafetyWeightHighway": "0.1",
+          "crnScoreSafetyWeightHighway": "0.0",
+          "distractedDrivingScoreWeight": "0.3",
+          "exSpeedScoreSafetyWeightCity": "0.0",
+          "lowSpeedScoreSafetyWeightCity": "0.0",
+          "exSpeedScoreSafetyWeightHighway": "0.7",
+          "lowSpeedScoreSafetyWeightHighway": "0.0"
+        },
+        "scoreFunctions": {
+          "phoneUseTable": "1.0000,1.0000,0.14000,0.13720,0.13440,0.13160,0.12880,0.12600,0.12330,0.12050,0.11770,0.11490,0.11210,0.10930,0.10650,0.10370,0.10090,0.09810,0.09530,0.09260,0.08980,0.08700,0.08420,0.08140,0.07860,0.07580,0.07300,0.07020,0.06740,0.06470,0.06190,0.05910,0.05630,0.05350,0.05070,0.04790,0.04510,0.04230,0.03950,0.03670,0.03400,0.03120,0.02840,0.02560,0.02280,0.02200,0.02160,0.02120,0.02080,0.02040,0.02000,0.01960,0.01920,0.01880,0.01840,0.01800,0.01760,0.01720,0.01680,0.01640,0.01600,0.01560,0.01520,0.01480,0.01440,0.01400,0.01360,0.01320,0.01280,0.01240,0.01200,0.01160,0.01120,0.01080,0.01040,0.01000,0.00960,0.00920,0.00880,0.00840,0.00800,0.00760,0.00720,0.00680,0.00640,0.00600,0.00560,0.00520,0.00480,0.00440,0.00400,0.00360,0.00320,0.00280,0.00240,0.00200,0.00160,0.00120,0.00080,0.00040,0.0000",
+          "phoneCallTable": "1.0000,1.0000,0.10000,0.09790,0.09580,0.09370,0.09160,0.08950,0.08740,0.08530,0.08330,0.08120,0.07910,0.07700,0.07490,0.07280,0.07070,0.06860,0.06650,0.06440,0.06230,0.06020,0.05810,0.05600,0.05400,0.05190,0.04980,0.04770,0.04560,0.04350,0.04140,0.03930,0.03720,0.03510,0.03300,0.03090,0.02880,0.02670,0.02470,0.02260,0.02050,0.01840,0.01630,0.01420,0.01210,0.01100,0.01080,0.01060,0.01040,0.01020,0.01000,0.00980,0.00960,0.00940,0.00920,0.00900,0.00880,0.00860,0.00840,0.00820,0.00800,0.00780,0.00760,0.00740,0.00720,0.00700,0.00680,0.00660,0.00640,0.00620,0.00600,0.00580,0.00560,0.00540,0.00520,0.00500,0.00480,0.00460,0.00440,0.00420,0.00400,0.00380,0.00360,0.00340,0.00320,0.00300,0.00280,0.00260,0.00240,0.00220,0.00200,0.00180,0.00160,0.00140,0.00120,0.00100,0.00080,0.00060,0.00040,0.00020,0.0000",
+          "accScoreCityTable": "200.190,200.190,200.190,200.190,200.190,200.190,200.190,200.190,200.190,12.757,12.034,11.311,10.732,10.299,10.009,9.913,9.817,9.720,9.624,9.528,9.431,9.335,9.238,9.142,9.075,9.009,8.942,8.875,8.808,8.742,8.675,8.608,8.541,8.475,8.401,8.326,8.252,8.178,8.104,8.030,7.956,7.882,7.807,7.712,7.617,7.521,7.426,7.331,7.235,7.140,7.007,6.873,6.740,6.606,6.473,6.306,6.139,5.972,5.805,5.583,5.361,5.138,4.916,4.693,4.471,4.137,3.804,3.470,3.136,2.803,2.469,1.802,1.602,1.401,1.301,1.201,1.101,1.001,0.901,0.801,0.701,0.601,0.534,0.467,0.400,0.360,0.320,0.280,0.240,0.200,0.180,0.160,0.140,0.120,0.100,0.080,0.060,0.040,0.020,0.000",
+          "brkScoreCityTable": "250.278,250.278,250.278,250.278,250.278,250.278,250.278,250.278,250.278,12.514,12.430,12.347,12.264,12.180,12.097,12.013,11.930,11.847,11.763,11.680,11.596,11.513,11.429,11.337,11.244,11.151,11.059,10.966,10.873,10.781,10.688,10.595,10.502,10.410,10.317,10.224,10.132,10.039,9.946,9.854,9.761,9.642,9.522,9.403,9.284,9.165,9.046,8.927,8.718,8.509,8.301,8.092,7.925,7.759,7.592,7.425,7.258,6.980,6.702,6.424,6.007,5.590,5.172,4.755,4.338,3.921,3.504,3.087,2.253,2.002,1.752,1.502,1.377,1.251,1.126,1.001,0.918,0.834,0.751,0.667,0.584,0.501,0.438,0.375,0.313,0.250,0.232,0.215,0.197,0.179,0.161,0.143,0.125,0.107,0.089,0.072,0.054,0.036,0.018,0.000",
+          "crnScoreCityTable": "1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,96.700,95.638,94.300,93.000,91.130,90.883,83.006,82.456,81.905,81.354,80.803,80.252,79.702,79.151,78.600,78.049,77.498,76.948,76.274,75.601,74.928,74.255,73.581,72.908,72.235,71.562,70.889,70.215,69.542,68.869,68.196,67.523,66.849,66.176,65.503,64.830,63.618,62.406,61.194,59.983,58.771,57.256,55.742,54.227,52.712,51.197,49.683,48.168,46.653,43.624,40.594,38.575,36.555,34.536,31.506,28.477,25.447,22.418,19.388,16.359,14.541,12.724,10.906,10.300,9.694,9.088,8.179,7.271,6.362,5.453,4.999,4.544,4.090,3.635,3.272,2.908,2.545,2.181,1.818,0.909,0.000",
+          "accScoreHiwayTable": "180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,180.171,9.009,8.922,8.835,8.748,8.662,8.575,8.488,8.401,8.315,8.228,8.168,8.108,8.048,7.988,7.928,7.867,7.807,7.747,7.687,7.627,7.560,7.494,7.427,7.360,7.294,7.227,7.160,7.093,7.027,6.941,6.855,6.769,6.683,6.598,6.512,6.426,6.306,6.186,6.066,5.946,5.826,5.675,5.525,5.375,5.225,5.025,4.825,4.624,4.424,4.224,4.024,3.724,3.423,3.123,2.823,2.522,2.222,1.622,1.441,1.261,1.171,1.081,0.991,0.901,0.811,0.721,0.631,0.541,0.480,0.420,0.360,0.324,0.288,0.252,0.216,0.180,0.162,0.144,0.126,0.108,0.090,0.072,0.054,0.036,0.018,0.000",
+          "brkScoreHiwayTable": "225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,225.250,10.887,10.812,10.737,10.662,10.587,10.512,10.437,10.362,10.286,10.203,10.120,10.036,9.953,9.869,9.786,9.702,9.619,9.536,9.452,9.369,9.285,9.202,9.118,9.035,8.952,8.868,8.785,8.678,8.570,8.463,8.356,8.248,8.141,8.034,7.846,7.659,7.471,7.283,7.133,6.983,6.833,6.682,6.532,6.282,6.032,5.781,5.406,5.031,4.655,4.280,3.904,3.529,3.154,2.778,2.027,1.802,1.577,1.352,1.239,1.126,1.014,0.901,0.826,0.751,0.676,0.601,0.526,0.451,0.394,0.338,0.282,0.225,0.209,0.193,0.177,0.161,0.145,0.129,0.113,0.097,0.080,0.064,0.048,0.032,0.016,0.000",
+          "crnScoreHiwayTable": "1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,1817.658,90.883,83.006,82.456,81.905,81.354,80.803,80.252,79.702,79.151,78.600,78.049,77.498,76.948,76.274,75.601,74.928,74.255,73.581,72.908,72.235,71.562,70.889,70.215,69.542,68.869,68.196,67.523,66.849,66.176,65.503,64.830,63.618,62.406,61.194,59.983,58.771,57.256,55.742,54.227,52.712,51.197,49.683,48.168,46.653,43.624,40.594,38.575,36.555,34.536,31.506,28.477,25.447,22.418,19.388,16.359,14.541,12.724,10.906,10.300,9.694,9.088,8.179,7.271,6.362,5.453,4.999,4.544,4.090,3.635,3.272,2.908,2.545,2.181,1.818,0.909,0.000",
+          "exSpeedScoreCityTable": "300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,6.346,6.061,5.793,5.544,5.321,5.142,5.053,4.964,4.875,4.786,4.697,4.662,4.628,4.594,4.560,4.525,4.491,4.457,4.422,4.388,4.354,4.320,4.285,4.251,4.217,4.183,4.148,4.114,4.080,4.045,4.011,3.968,3.925,3.883,3.840,3.797,3.754,3.711,3.668,3.583,3.497,3.411,3.325,3.257,3.188,3.120,3.051,2.983,2.868,2.754,2.640,2.468,2.297,2.183,2.068,1.954,1.783,1.611,1.440,1.268,0.926,0.874,0.823,0.720,0.617,0.566,0.514,0.463,0.411,0.377,0.343,0.309,0.274,0.240,0.206,0.185,0.165,0.144,0.123,0.103,0.086,0.069,0.051,0.034,0.017,0.000",
+          "exSpeedScoreHiwayTable": "300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,300.000,5.142,5.053,4.964,4.875,4.786,4.697,4.662,4.628,4.594,4.560,4.525,4.491,4.457,4.422,4.388,4.354,4.320,4.285,4.251,4.217,4.183,4.148,4.114,4.080,4.045,4.011,3.968,3.925,3.883,3.840,3.797,3.754,3.711,3.668,3.583,3.497,3.411,3.325,3.257,3.188,3.120,3.051,2.983,2.868,2.754,2.640,2.468,2.297,2.183,2.068,1.954,1.783,1.611,1.440,1.268,0.926,0.874,0.823,0.720,0.617,0.566,0.514,0.463,0.411,0.377,0.343,0.309,0.274,0.240,0.206,0.185,0.165,0.144,0.123,0.103,0.086,0.069,0.051,0.034,0.017,0.000",
+          "lowSpeedScoreCityTable": "2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,2089.314,104.466,102.655,100.844,99.033,97.223,95.412,94.716,94.019,93.323,92.626,91.930,91.233,90.537,89.840,89.144,88.448,87.751,87.055,86.358,85.662,84.965,84.269,83.573,82.876,82.180,81.483,80.613,79.742,78.872,78.001,77.130,76.260,75.389,74.519,72.778,71.037,69.296,67.554,66.162,64.769,63.376,61.983,60.590,58.269,55.947,53.626,50.144,46.661,44.340,42.018,39.697,36.215,32.733,29.250,25.768,18.804,17.759,16.715,14.625,12.536,11.491,10.447,9.402,8.357,7.661,6.964,6.268,5.572,4.875,4.179,3.761,3.343,2.925,2.507,2.089,1.741,1.393,1.045,0.696,0.348,0.000",
+          "lowSpeedScoreHiwayTable": "2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,2056.490,102.825,101.042,99.260,97.478,95.695,93.913,93.228,92.542,91.857,91.171,90.486,89.800,89.115,88.429,87.744,87.058,86.373,85.687,85.002,84.316,83.631,82.945,82.260,81.574,80.889,80.203,79.346,78.489,77.632,76.776,75.919,75.062,74.205,73.348,71.634,69.921,68.207,66.493,65.122,63.751,62.380,61.009,59.638,57.353,55.068,52.783,49.356,45.928,43.643,41.358,39.073,35.646,32.218,28.791,25.363,18.508,17.480,16.452,14.395,12.339,11.311,10.282,9.254,8.226,7.540,6.855,6.169,5.484,4.798,4.113,3.702,3.290,2.879,2.468,2.056,1.714,1.371,1.028,0.685,0.343,0.000"
+        }
+      },
+      "sensorRates": {
+        "Gyro": "30",
+        "Accel": "30"
+      },
+      "coreModulesInit": {
+        "GPS": {
+          "fMinAngle": "60",
+          "fLegDistanceM": "50",
+          "fAccCandGpsTresh": "5",
+          "fBrkCandGpsTresh": "-5",
+          "wake_lock_enabled": "1",
+          "nPassiveGPSAccuracy": "201",
+          "fExSpdGpsTreshInMphs": "80",
+          "nMaxValidGPSAccuracy": "50",
+          "isPassiveModeSupported": "1",
+          "nMaxValidGPSMapAccuracy": "60",
+          "checkSwitchToPassiveTime": "180",
+          "nMaxValidGPSTrailAccuracy": "201",
+          "nMinSpeedForLegDistCalcMPH": "3",
+          "acquire_wake_lock_after_sec": "2",
+          "checkForValidLocationAtLeast": "2",
+          "nMaxValidGPSDetectionAccuracy": "201",
+          "checkPassiveConditionTimeInterval": "6",
+          "stayInPassiveConditionSamplesCount": "4"
+        },
+        "Gyro": {
+          "fMinAngleDeg": "70",
+          "fMaxnAngleDeg": "120",
+          "nnDeltaAngleDurMsec": "2000"
+        },
+        "Accel": {
+          "fAccTreshInG": "0.25",
+          "fBrkTreshInG": "0.25",
+          "nnMinTimeBetweenEventsMsec": "5000"
+        },
+        "CrashDetection": {
+          "crash_acc_freq": "50",
+          "crash_baro_freq": "5",
+          "crash_gyro_freq": "15",
+          "gps_min_accuracy_m": "50",
+          "almost_full_stop_mph": "2",
+          "imu_log_duration_sec": "60",
+          "imu_log_lookback_sec": "40",
+          "baro_log_duration_sec": "60",
+          "baro_log_lookback_sec": "40",
+          "decel_acc_lookback_msec": "8000",
+          "decel_group_max_dur_sec": "8",
+          "max_impact_duration_msec": "1000",
+          "min_impact_acc_mag_max_g": "3.1",
+          "min_impact_duration_msec": "35",
+          "crash_min_speed_before_mph": "10",
+          "decel_acc_lookforward_msec": "2000",
+          "gps_max_decel_delta_t_msec": "3000",
+          "gps_min_decel_delta_t_msec": "750",
+          "crash_speed_diff_thresh_mph": "-7",
+          "impact_iceberg_mag_thresh_g": "1.2",
+          "impact_detector_max_gap_msec": "70",
+          "min_decel_last_speed_before_mph": "10",
+          "max_speed_low_thresh_for_car_mph": "25",
+          "impact_agg_decel_max_meters_per_s": "40",
+          "impact_agg_decel_min_meters_per_s": "1.84",
+          "decel_time_to_full_stop_thresh_sec": "14",
+          "post_decel_decision_window_len_sec": "60",
+          "trip_max_speed_bypass_duration_sec": "300",
+          "gps_last_speed_before_lookback_msec": "3000",
+          "pre_decel_acc_mag_min_high_thresh_g": "1.0",
+          "crash_offset_for_max_speed_after_sec": "9",
+          "decel_time_to_near_full_stop_thresh_sec": "14",
+          "decel_dist_to_end_of_window_thresh_meters": "150",
+          "decel_post_decel_speed_in_window_thresh_mph": "15"
+        },
+        "DistractedDriving": {
+          "fTreshOfCos": "0.08",
+          "nnExtentionMSec": "30000",
+          "spd_int_reduct_sec": "5",
+          "spd_int_min_len_sec": "2"
+        }
+      },
+      "algoParamVersion": "1",
+      "severityThresholds": {
+        "Accel": [
+          "0.2",
+          "0.4",
+          "0.45"
+        ],
+        "Brake": [
+          "0.2",
+          "0.4",
+          "0.45"
+        ],
+        "Corner": [
+          "0.2",
+          "0.4",
+          "0.45"
+        ],
+        "ExSpeed": [
+          "75",
+          "85",
+          "90"
+        ]
+      }
+    },
+    "data_transfer": {
+      "params": {
+        "user_request_timeout_sec": 8
+      },
+      "client_log": {
+        "log_sdk_api": false,
+        "log_lines_max": 10000,
+        "log_lines_min": 500,
+        "filter_log_ids": [
+          175,
+          176,
+          500,
+          501,
+          502
+        ],
+        "log_create_timeout_sec": 3600
+      },
+      "upload_policies": [
+        {
+          "conf": false,
+          "type": "default",
+          "reach": "any",
+          "retry_any_sec": 31536000,
+          "retry_wifi_sec": 1209600
+        },
+        {
+          "conf": false,
+          "type": "driving_events_data",
+          "reach": "wifi",
+          "retry_any_sec": 1814400,
+          "retry_wifi_sec": 345600
+        },
+        {
+          "conf": false,
+          "type": "sensors_session_data",
+          "reach": "wifi",
+          "retry_any_sec": 0,
+          "retry_wifi_sec": 3024000
+        },
+        {
+          "conf": false,
+          "type": "ping",
+          "reach": "any",
+          "retry_any_sec": 31536000,
+          "retry_wifi_sec": 1209600
+        },
+        {
+          "conf": true,
+          "type": "trip",
+          "reach": "any",
+          "retry_any_sec": 31536000,
+          "retry_wifi_sec": 1209600
+        },
+        {
+          "conf": false,
+          "type": "sensors_data",
+          "reach": "wifi",
+          "retry_any_sec": 1814400,
+          "retry_wifi_sec": 1209600
+        },
+        {
+          "conf": false,
+          "type": "research_data",
+          "reach": "any",
+          "retry_any_sec": 0,
+          "retry_wifi_sec": 1209600
+        }
+      ]
+    },
+    "compliance": {
+      "supported_os": {
+        "ios_major_ver": "15",
+        "android_major_ver": "12"
+      },
+      "power_saving_mode": {
+        "sleep": {
+          "enabled": true,
+          "vendors": [
+            "all",
+            ""
+          ]
+        },
+        "standby": {
+          "enabled": true,
+          "reset_act_dur_sec": 1,
+          "force_show_period_sec": 172800,
+          "reset_act_interval_sec": 7200
+        }
+      }
+    },
+    "data_collection": {
+      "trip": {
+        "stream": {
+          "gyro": {
+            "enabled": true,
+            "sampling_freq_msec": 1000
+          },
+          "accel": {
+            "enabled": true,
+            "sampling_freq_msec": 1000
+          },
+          "magnet": {
+            "enabled": true,
+            "sampling_freq_msec": 1000
+          }
+        },
+        "bt_scan": {
+          "dur_sec": 10,
+          "enabled": true,
+          "freq_sec": 300
+        },
+        "sensors": {
+          "baro": {
+            "enabled": false,
+            "save_freq_sec": 60,
+            "sampling_freq_msec": 0
+          },
+          "gyro": {
+            "enabled": true,
+            "save_freq_sec": 60,
+            "sampling_freq_msec": 10
+          },
+          "accel": {
+            "enabled": true,
+            "save_freq_sec": 60,
+            "sampling_freq_msec": 10
+          },
+          "magnet": {
+            "enabled": false,
+            "save_freq_sec": 60,
+            "sampling_freq_msec": 0
+          },
+          "cpu_load": {
+            "enabled": true,
+            "save_freq_sec": 60,
+            "sampling_freq_msec": 20
+          }
+        },
+        "activity": {
+          "enabled": true,
+          "freq_sec": 300
+        },
+        "wifi_scan": {
+          "enabled": true,
+          "min_freq_sec": 5
+        },
+        "baro_buffer": {
+          "enabled": true,
+          "baro_interval_sec": 900
+        }
+      },
+      "other": {
+        "apps_info": {
+          "enabled": true,
+          "freq_sec": 432000
+        }
+      },
+      "user_events": [
+        {
+          "value": "com.apple.springboard.activeCallStateChanged",
+          "handler": "APICallback1:"
+        },
+        {
+          "value": "com.apple.iokit.hid.displayStatus",
+          "handler": "APICallback2:"
+        },
+        {
+          "value": "com.apple.springboard.lockstate",
+          "handler": "APICallback3:"
+        }
+      ]
+    },
+    "trip_detection": {
+      "freq_loc": {
+        "enabled": true,
+        "min_trip_distance_m": 500,
+        "last_drv_speed_timeout_sec": 20
+      },
+      "trip_end": {
+        "watchdog_sec": 1800,
+        "timeout_def_sec": 300,
+        "prolongation_sec": 600,
+        "speed_estimation": {
+          "enabled": true,
+          "speed_err": 0.5,
+          "consecutive": 1,
+          "num_samples": 5,
+          "delta_time_sec": 0.25,
+          "loc_accuracy_m": 1000,
+          "loc_accuracy_ratio_thresh": 1
+        }
+      },
+      "geofences": {
+        "slc_treshold_m": 2000,
+        "periodic_valid_dist_m": 5000,
+        "valid_max_loc_accur_m": 200,
+        "fuse_loc_max_timeout_sec": 12,
+        "delayed_topology_update_sec": 120
+      },
+      "long_trip": {
+        "enabled": true,
+        "long_trip_dur_sec": 7200,
+        "trip_end_timeout_sec": 60,
+        "speed_check_timeout_sec": 0
+      },
+      "step_count": {
+        "min_step_count": 10,
+        "aggregation_window_sec": 20,
+        "no_drv_speed_window_sec": 30,
+        "bypass_orientation_change": false
+      },
+      "trip_start": {
+        "max_bt_dur_sec": 300,
+        "geo_response_ms": 5000,
+        "max_geo_dur_sec": 150,
+        "speed_estimation": {
+          "enabled": true,
+          "speed_err": 0.5,
+          "consecutive": 1,
+          "num_samples": 5,
+          "delta_time_sec": 0.25,
+          "loc_accuracy_m": 1000,
+          "loc_accuracy_ratio_thresh": 50
+        },
+        "slc_start_enabled": true,
+        "resume_after_unexp_term": {
+          "enabled": true,
+          "expiration_sec": 600
+        },
+        "loc_with_drv_speed_count": 7,
+        "loc_with_drv_speed_window_sec": 30,
+        "gps_no_transition_end_timeout_sec": 360,
+        "gps_no_transition_end_gps_delay_sec": 120
+      },
+      "battery_level": {
+        "enabled": true,
+        "threshold_pct": 10
+      },
+      "transition_api": {
+        "enabled": true,
+        "refresh_sec": 14400
+      },
+      "motion_activity": {
+        "speed_check": {
+          "enabled": true,
+          "slc_fp_max_count": 3,
+          "samples_to_search": 1,
+          "lookback_window_sec": 120,
+          "history_interval_sec": 1800,
+          "slc_samples_to_search": 1,
+          "slc_lookback_window_sec": 120
+        }
+      },
+      "connectivity_triggers": {
+        "bt": {
+          "use_enabled": true,
+          "stats_enabled": true,
+          "max_btcar_dur_sec": 600,
+          "min_drv_speed_ifcar_bt": 3
+        },
+        "wifi": {
+          "use_enabled": true,
+          "stats_enabled": true,
+          "speed_check_timeout_sec": 5
+        }
+      }
+    },
+    "general": {
+      "min_drv_speed_kph": 20,
+      "polling_interval_sec": -1,
+      "general_periodic_interval_sec": 86400
+    },
+    "info": {
+      "config_ver": 14,
+      "service_name": "core"
+    }
+  }
+}
