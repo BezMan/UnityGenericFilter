@@ -5,15 +5,15 @@ data class Articles(
 )
 
 data class Article(
-    val description: String,
-    val image_url: String,
-    val placeholderColor: PlaceholderColor,
-    val rating: Int,
-    val title: String
+    val description: String = "",
+    val image_url: String = "",
+    val placeholderColor: PlaceholderColor = PlaceholderColor(),
+    val rating: Int = -1,
+    val title: String = ""
 )
 
 data class PlaceholderColor(
-    val blue: Int,
-    val green: Int,
-    val red: Int
+    val blue: Int = -1,
+    val green: Int = -1,
+    val red: Int = -1
 )
