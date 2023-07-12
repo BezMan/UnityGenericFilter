@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.practicemvvm.databinding.ActivityMainBinding
 import com.example.unityapp.data.Article
 import com.example.unityapp.utils.Filter
-import com.example.unityapp.utils.FilterTrials
+import com.example.unityapp.utils.GenericFilter
 
 class MainActivity : AppCompatActivity(), MainListAdapter.OnItemClickListener {
 
@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity(), MainListAdapter.OnItemClickListener {
         if (filterNum.isNotBlank() && filterStr.isNotBlank()) {
 
             val filters = mutableListOf<Filter<Any>>(
-                FilterTrials.NumberFilter(filterNum.toString().toInt()),
-                FilterTrials.StringFilter(filterStr.toString())
+                GenericFilter.NumberFilter(filterNum.toString().toInt()),
+                GenericFilter.StringFilter(filterStr.toString())
             )
-            list = FilterTrials.filterer(list, filters)
+            list = GenericFilter.filterer(list, filters)
         }
         mainListAdapter.submitList(list)
     }

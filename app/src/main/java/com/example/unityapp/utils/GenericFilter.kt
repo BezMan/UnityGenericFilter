@@ -2,7 +2,7 @@ package com.example.unityapp.utils
 
 import com.example.unityapp.data.Article
 
-class FilterTrials {
+class GenericFilter {
 
     class StringFilter(private val filterStr: String) : Filter<String> {
         override fun filterThisList(list: List<Article>): List<Article> {
