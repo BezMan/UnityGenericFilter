@@ -22,19 +22,19 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    flavorDimensions "language"
+    flavorDimensions "impl"
 
     productFlavors {
-        kotlin {
-            dimension "language"
+        real {
+            dimension "impl"
             sourceSets {
-                main.java.srcDirs += 'src/kotlin/main'
+                main.java.srcDirs += 'src/real/main'
             }
         }
-        java {
-            dimension "language"
+        fake {
+            dimension "impl"
             sourceSets {
-                main.java.srcDirs += 'src/java/main'
+                main.java.srcDirs += 'src/fake/main'
             }
         }
     }
