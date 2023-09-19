@@ -4,13 +4,13 @@ import com.example.unityapp.data.Article
 
 class GenericFilter {
 
-    class StringFilter(private val filterStr: String) : Filter<String> {
+    class StringFilter(private val filterStr: String) : Filter {
         override fun filterThisList(list: List<Article>): List<Article> {
             return list.filter { it.title.contains(filterStr) }
         }
     }
 
-    class NumberFilter(private val filterNum: Number) : Filter<Number> {
+    class NumberFilter(private val filterNum: Number) : Filter {
         override fun filterThisList(list: List<Article>): List<Article> {
             return list.filter { it.rating == filterNum }
         }
@@ -18,7 +18,7 @@ class GenericFilter {
 
     companion object {
 
-        fun filterer(list: List<Article>, filters: List<Filter<Any>>): List<Article> {
+        fun filterer(list: List<Article>, filters: List<Filter>): List<Article> {
             var res = list
 
             filters.forEach {
@@ -33,7 +33,7 @@ class GenericFilter {
 }
 
 
-interface Filter<out T> {
+interface Filter {
     fun filterThisList(list: List<Article>): List<Article>
 }
 

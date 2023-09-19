@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), MainListAdapter.OnItemClickListener {
 
         if (filterNum.isNotBlank() && filterStr.isNotBlank()) {
 
-            val filters = mutableListOf<Filter<Any>>(
+            val filters = mutableListOf(
                 GenericFilter.NumberFilter(filterNum.toString().toInt()),
                 GenericFilter.StringFilter(filterStr.toString())
             )
