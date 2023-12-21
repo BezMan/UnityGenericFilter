@@ -12,6 +12,14 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+
+        val str = "yoyo"
+        assertEquals(str.quoted(), "'yoyo'")
+        assertTrue(str.isShort())
     }
+
+    private fun String.quoted() = "'${this}'"
+    private fun String.isShort() = this.length < 5
+
+
 }
