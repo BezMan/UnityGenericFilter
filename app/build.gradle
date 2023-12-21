@@ -31,11 +31,20 @@ android {
                 main.java.srcDirs += 'src/realApi/main'
             }
         }
-        fakeApi {
+        mockApi {
+            applicationIdSuffix = ".mock"
             dimension "myImpl"
             sourceSets {
-                main.java.srcDirs += 'src/fakeApi/main'
+                main.java.srcDirs += 'src/mockApi/main'
             }
+        }
+    }
+
+    // Remove mockApiRelease as it's not needed.
+    android.variantFilter { variant ->
+        if(variant.buildType.name == 'release'
+                && variant.getFlavors().get(0).name == 'mockApi') {
+            variant.setIgnore(true)
         }
     }
 
